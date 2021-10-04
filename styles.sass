@@ -1,0 +1,147 @@
+$mate-black: #232323
+$dangerous-yellow: #e8be0e
+$dangerous-orange: #ce6611
+$mate-gray: #313030
+$relax-gray: #4d4d4d
+
+$github-icon-size: 60px
+
+@import "media/font/stylesheet.css"
+
+*
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  color: inherit
+
+.tp-on-attention
+  background-color: $mate-black
+  color: $dangerous-orange
+  cursor: pointer
+
+
+.img-on-attention
+  border-radius: 50%
+  border: 5px solid $dangerous-orange
+  height: $github-icon-size - 10
+  width: $github-icon-size - 10
+  border-left: 2px solid $mate-black
+  background-color: $dangerous-orange
+  border-left: 5px solid $dangerous-orange
+
+body
+  background-color: $mate-gray
+  font-family: "Open Sans", sans-serif
+  main
+    max-width: 600px
+    min-width: 100px
+    margin: auto
+    padding: 10px
+    header
+      display: flex
+      background-color: $relax-gray
+      padding: 10px
+      h1
+        font-family: 'boston_trafficregular', sans-serif
+        display: inline-flex
+        color: $dangerous-yellow
+        text-align: right
+        margin: auto
+      figure
+        width: 122px
+        height: auto
+        display: inline-flex
+        flex-direction: column
+        margin-right: auto
+        position: relative
+        float: left
+        img
+          width: 100%
+          clear: left
+        figcaption
+          font-size: 9px
+          font-weight: bold
+          background-color: $dangerous-orange
+          padding-left: 2px
+          padding-right: 2px
+          display: block
+          float: left
+          position: absolute
+          top: 0
+          border: 1px solid
+    ul
+      list-style-type: none
+      width: auto
+      //min-width: 100px
+      //max-width: 400px
+      li
+        border: 2px solid $mate-black
+        display: flex
+        margin-top: 10px
+        //padding: 6px
+        background-color: $dangerous-yellow
+        color: $mate-black
+        div
+          //margin: auto auto auto 12px
+          display: flex
+          width: 100%
+          height: 100%
+          a
+            width: 100%
+            height: 72px
+            display: flex
+            &:focus
+              @extend .tp-on-attention
+            &:hover
+              @extend .tp-on-attention
+            p
+              font-family: 'boston_trafficregular',sans-serif
+              font-weight: bold
+              font-size: 1.5em
+              width: 100%
+              margin: auto 10px
+
+        .img--logo
+          background-color: $mate-black
+          border-left: 2px solid $mate-black
+          a
+            &:focus
+              img
+                @extend .img-on-attention
+            img
+              height: $github-icon-size
+              width: $github-icon-size
+              display: flex
+              padding: 6px
+              background-color: $dangerous-orange
+              &:hover
+                @extend .img-on-attention
+          figcaption
+              position: absolute
+              top: 0
+              bottom: 0
+              left: 0
+              right: 0
+              visibility: hidden
+  footer
+    margin-top: 10px
+    padding: 10px
+    background-color: $mate-black
+    color: white
+    text-align: right
+    div
+      a
+        color: $dangerous-yellow
+        font-weight: bold
+        padding-right: 2px
+        padding-left: 2px
+        &:hover
+          color: $mate-black
+          background-color: $dangerous-orange
+          border-radius: 5px
+        &:focus
+          color: $mate-black
+          background-color: $dangerous-orange
+          border-radius: 5px
